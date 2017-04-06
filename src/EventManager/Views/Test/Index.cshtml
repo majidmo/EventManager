@@ -1,0 +1,22 @@
+﻿@model IEnumerable<EventManager.Models.Event>
+
+
+<h2>Index</h2>
+
+<p>Hello from our View Template!</p>
+
+<h3>Browse Genres</h3>
+<p>
+    Select from @ViewBag.Title
+    events:
+</p>
+
+<ul>
+    @foreach (var myEvent in Model)
+    {
+        <li>
+            @Html.ActionLink(myEvent.Name,"Events", new { myEvent = myEvent.Name })
+    </li>
+    }
+
+</ul>
