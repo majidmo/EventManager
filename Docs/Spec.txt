@@ -1,0 +1,55 @@
+﻿Event Manager 1.0
+
+Features:
+Supports following Event Signup Types:
+Open: An event can be open to everyone and they can sign up by just entering an email address (no login or verificaqtion)
+OpenRegistered: An event can be open to everyone but they need to login to sign up
+Closed: An event is only open to a defined list of attendees
+
+Event organizer can trigger email notifications to attendees at any time.
+
+
+Workflow:
+1. User logs in to system
+2. User creates an Event (see Entities section below for fields) and adds invitees to event (Optional) 
+3. User is presented with a Url that allows people to sign up to this event
+4. Interested person clicks Url to an event and presented with option to RSVP by entering his email if Event is not restricted and deadline not passed
+
+
+Use cases:
+-Pickup game: Majid plans to have a pickup game on Sunday. He needs 10 players. He creates the event and adds emails of attendees (15). After 10 have signed up, no more sign up is allowed.
+-Yuga Class: Solmaz created an event. It is open to everyone. First 20 people that sign up can get in.
+
+
+Entities:
+EVENT 
+EventId
+OrganizerId
+EventName
+Description
+Date
+Location
+RSVP Deadline
+Attendee List (emails)
+AllowAnonymous
+Restricted
+MaxNumberOfAttendees
+AttendeeListVisibleToAll
+Price
+
+RSVP
+EventID
+AttendeeId
+NumberOfAttendees
+
+UI
+-Login Page (email and password)
+-Create Event Page 
+-Event Sign Up Page
+If event is open 
+
+Out of Scope 
+-Recurring events
+-Waiting List
+-Support Maybe for RSVP
+-Different Pricing Classes
